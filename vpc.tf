@@ -1,8 +1,8 @@
 
-resource "aws_vpc" "postman-001" {
-  cidr_block = "10.2.2.0/24"
+resource "aws_vpc" "plat-002" {
+  cidr_block = "10.3.3.0/24"
   tags = {
-    Name = "postman-001"
+    Name = "plat-002"
   }
 }
     
