@@ -21,7 +21,7 @@ jobs:
       - name: Git clone the repository
         uses: actions/checkout@v3
       - name: configure aws credentials
-        uses: aws-actions/configure-aws-credentials@vv2
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: ${{ secrets.AWS_IAM_ROLE}}
           role-session-name: Platform_Portal_Terraform_GitHub
