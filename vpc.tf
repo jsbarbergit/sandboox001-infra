@@ -1,8 +1,8 @@
 
-resource "aws_vpc" "sb001" {
-  cidr_block = "10.0.0.0/24"
+resource "aws_vpc" "test002" {
+  cidr_block = "10.10.10.0/24"
   tags = {
-    Name = "sb001"
+    Name = "test002"
   }
 }
     
