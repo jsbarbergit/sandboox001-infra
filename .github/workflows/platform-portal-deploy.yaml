@@ -31,3 +31,20 @@ jobs:
       - name: Sts GetCallerIdentity
         run: |
           aws sts get-caller-identity
+      # Run TF
+      - uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.5.4
+      # Run TF Init
+      - name: Terraform Init
+        id: init
+        run: terraform init
+
+      - name: Terraform Validate
+        id: validate
+        run: terraform validate -no-color
+      # Just a demo so apply
+      - name: Terraform Apply
+        id: plan
+        run: terraform apply --auto-apply
+        continue-on-error: true
